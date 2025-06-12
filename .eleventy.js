@@ -1,12 +1,11 @@
-module.exports = function (eleventyConfig) {
-  // Copy static assets to output
+module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
 
   return {
     dir: {
-      input: ".",           // your source folder
-      includes: "_includes",// layout/partials folder
-      output: "docs"        // GitHub Pages-ready folder
+      input: ".",              // Source files live here
+      includes: "_includes",   // Nunjucks partials/layouts
+      output: "_site"          // Final output folder
     },
     templateFormats: ["html", "njk", "md"],
     htmlTemplateEngine: "njk"
